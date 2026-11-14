@@ -1,0 +1,147 @@
+import { IMAGERY, nasaImagesLink, scienceLink, type BodyRecord } from "../body";
+
+export const SMALL_BODIES: BodyRecord[] = [
+  {
+    id: "bennu",
+    title: "Asteroid Bennu",
+    category: "Near-Earth asteroid",
+    aliases: ["bennu", "asteroid", "asteroid bennu", "osiris-rex", "osiris rex", "rq36", "asteroid sample"],
+    facts: [
+      { label: "Diameter", value: "About 500 meters, roughly the height of the Empire State Building" },
+      { label: "Type", value: "Carbon-rich rubble pile, a leftover building block of the early solar system" },
+      { label: "Discovery", value: "Found in 1999 by the LINEAR survey" },
+      { label: "Sample", value: "OSIRIS-REx collected about 121 grams and returned it to Earth on September 24, 2023" },
+      { label: "Orbit", value: "It crosses Earth's orbit and comes close roughly every six years" },
+      { label: "Future risk", value: "There is a very small chance of an Earth impact in 2182; NASA continues to refine the orbit" },
+    ],
+    briefing:
+      "Bennu is a dark, carbon-rich asteroid that may hold organic molecules from the birth of the solar system. NASA's OSIRIS-REx touched down, grabbed a sample, and brought it home in 2023. Scientists are analyzing that material for clues about how water and life's ingredients reached Earth.",
+    sceneDescription:
+      "A real OSIRIS-REx image of Bennu hangs against the stars, its diamond-shaped rubble surface catching sunlight. The camera drifts slowly, giving the asteroid parallax and depth.",
+    suggestedQuestions: ["What did OSIRIS-REx bring back?", "Could Bennu hit Earth?", "What is Bennu made of?"],
+    scene: { type: "deep-space", bodyId: "bennu", imageUrls: [IMAGERY.bennu], accent: "#b3a99a", variant: "small-body", cameraDistance: 5.1 },
+    nasaQuery: "Bennu OSIRIS-REx",
+    svsQuery: "Bennu",
+    horizonsTarget: "101955",
+    links: [scienceLink("bennu"), { label: "NASA OSIRIS-REx", url: "https://science.nasa.gov/mission/osiris-rex/" }],
+  },
+  {
+    id: "vesta",
+    title: "Asteroid Vesta",
+    category: "Asteroid belt",
+    aliases: ["vesta", "asteroid vesta", "dawn vesta", "rheasilvia"],
+    facts: [
+      { label: "Diameter", value: "About 525 kilometers" },
+      { label: "Rank", value: "The second-largest object in the asteroid belt" },
+      { label: "Surface", value: "A giant impact basin called Rheasilvia, about 500 kilometers wide" },
+      { label: "Mountain", value: "A central peak in Rheasilvia rises about 22 kilometers" },
+      { label: "Mission", value: "NASA's Dawn orbited Vesta from 2011 to 2012" },
+      { label: "Meteorites", value: "About one in twenty meteorites found on Earth comes from Vesta" },
+    ],
+    briefing:
+      "Vesta is a protoplanet that never finished growing. Dawn revealed a world with a huge south-polar impact basin, a towering central peak, and grooves that wrap around its equator. Its bright surface and distinct composition link it directly to meteorites on Earth.",
+    sceneDescription:
+      "A real Dawn image of Vesta fills the view, its south-polar basin and ridged terrain sharply lit. The camera drifts slowly against a star field.",
+    suggestedQuestions: ["What did Dawn find at Vesta?", "Why is Vesta so bright?", "Is Vesta a planet?"],
+    scene: { type: "deep-space", bodyId: "vesta", imageUrls: [IMAGERY.vesta], accent: "#cfc6b4", variant: "small-body", cameraDistance: 5.1 },
+    nasaQuery: "Vesta Dawn",
+    svsQuery: "Vesta",
+    horizonsTarget: "4",
+    links: [scienceLink("vesta"), { label: "NASA Dawn", url: "https://science.nasa.gov/mission/dawn/" }],
+  },
+  {
+    id: "psyche",
+    title: "Asteroid Psyche",
+    category: "Metal-rich asteroid",
+    aliases: ["psyche", "asteroid psyche", "psyche mission", "16 psyche"],
+    facts: [
+      { label: "Diameter", value: "About 226 kilometers" },
+      { label: "Type", value: "Metal-rich, possibly the exposed core of a shattered protoplanet" },
+      { label: "Distance from the Sun", value: "About 3 times Earth's distance, in the outer asteroid belt" },
+      { label: "Mission", value: "NASA's Psyche spacecraft launched on October 13, 2023" },
+      { label: "Arrival", value: "It is expected to arrive in 2029" },
+      { label: "Why it matters", value: "It may offer a direct look at a planetary core, something we cannot see on Earth" },
+    ],
+    briefing:
+      "Psyche may be the metallic heart of a small planet that was stripped by collisions. NASA's spacecraft will orbit it to measure its composition, magnetic field, and structure. Studying it could reveal how rocky planets like Earth formed their cores.",
+    sceneDescription:
+      "A real mission image of the Psyche asteroid floats in darkness, its irregular metallic surface mottled with craters. The camera drifts slowly for parallax.",
+    suggestedQuestions: ["Is Psyche really a metal asteroid?", "When will Psyche arrive?", "Why study a metal asteroid?"],
+    scene: { type: "deep-space", bodyId: "psyche", imageUrls: [IMAGERY.psyche], accent: "#a8a29a", variant: "small-body", cameraDistance: 5.1 },
+    nasaQuery: "Psyche asteroid mission",
+    svsQuery: "Psyche",
+    horizonsTarget: "16",
+    links: [scienceLink("psyche"), { label: "NASA Psyche", url: "https://science.nasa.gov/mission/psyche/" }],
+  },
+  {
+    id: "comet-67p",
+    title: "Comet 67P",
+    category: "Jupiter-family comet",
+    aliases: ["67p", "comet", "67p/churyumov-gerasimenko", "churyumov", "churyumov-gerasimenko", "rosetta", "philae", "comet 67p"],
+    facts: [
+      { label: "Size", value: "About 4.3 by 4.1 kilometers, shaped like a rubber duck" },
+      { label: "Orbit", value: "About 6.45 years around the Sun" },
+      { label: "Mission", value: "ESA's Rosetta arrived in August 2014 and released the Philae lander on November 12, 2014" },
+      { label: "Surface", value: "Dust, ice, pits, and jets of gas and dust" },
+      { label: "Discovery", value: "Found in 1969 by Soviet astronomers Klim Churyumov and Svetlana Gerasimenko" },
+      { label: "Legacy", value: "Rosetta was the first mission to orbit and land on a comet" },
+    ],
+    briefing:
+      "Comet 67P is a frozen relic from the early solar system. Rosetta watched it wake up as it approached the Sun, mapping jets, pits, and a landscape of ice and dust. Philae's bumpy landing returned the first close-up measurements from a comet's surface.",
+    sceneDescription:
+      "A real Rosetta image of comet 67P hangs in the dark, its double-lobed shape lit by the Sun. Faint jets blur the limb as the camera drifts.",
+    suggestedQuestions: ["Did Rosetta find life on the comet?", "What is 67P made of?", "Why did Philae bounce?"],
+    scene: { type: "deep-space", bodyId: "comet-67p", imageUrls: [IMAGERY.comet67p], accent: "#bfc4c7", variant: "small-body", cameraDistance: 5.1 },
+    nasaQuery: "Comet 67P Rosetta",
+    svsQuery: "67P",
+    horizonsTarget: "90000033",
+    links: [scienceLink("comet 67p"), { label: "ESA Rosetta", url: "https://www.esa.int/Science_Exploration/Space_Science/Rosetta" }],
+  },
+  {
+    id: "halley",
+    title: "Halley's Comet",
+    category: "Periodic comet",
+    aliases: ["halley", "halley's comet", "comet halley", "1p/halley"],
+    facts: [
+      { label: "Size", value: "About 15 by 8 kilometers" },
+      { label: "Orbit", value: "About 76 years around the Sun" },
+      { label: "Last visit", value: "1986, when several spacecraft flew past" },
+      { label: "Next visit", value: "Expected around 2061" },
+      { label: "Meteor shower", value: "Its dust creates the Orionid and Eta Aquariid meteor showers each year" },
+      { label: "Legacy", value: "The first comet identified as periodic, by Edmond Halley in 1705" },
+    ],
+    briefing:
+      "Halley's Comet is the most famous periodic comet and the source of two annual meteor showers. Every 76 years it swings through the inner solar system and grows a bright coma and tail. It last appeared in 1986 and will return around 2061.",
+    sceneDescription:
+      "A real telescope image of Halley's Comet hangs against a star field, its pale tail stretching away from the Sun. The camera drifts slowly for depth.",
+    suggestedQuestions: ["When will Halley's Comet return?", "What causes the Orionid meteors?", "How big is Halley's Comet?"],
+    scene: { type: "deep-space", bodyId: "halley", imageUrls: [IMAGERY.halley], accent: "#b7d2d9", variant: "small-body", cameraDistance: 5.1 },
+    nasaQuery: "Halley comet",
+    svsQuery: "Halley",
+    horizonsTarget: "90000030",
+    links: [scienceLink("halley's comet"), nasaImagesLink("Halley's Comet")],
+  },
+  {
+    id: "comet-neowise",
+    title: "Comet NEOWISE",
+    category: "Long-period comet",
+    aliases: ["neowise", "comet neowise", "c/2020 f3"],
+    facts: [
+      { label: "Discovery", value: "Found in March 2020 by NASA's NEOWISE telescope" },
+      { label: "Brightness", value: "It became the brightest comet visible from the Northern Hemisphere since Hale-Bopp" },
+      { label: "Closest approach", value: "It passed about 103 million kilometers from Earth in July 2020" },
+      { label: "Period", value: "Roughly 6,800 years before it returns" },
+      { label: "Tail", value: "A broad dust tail and a faint blue ion tail" },
+      { label: "Origin", value: "A frozen remnant from the distant Oort Cloud" },
+    ],
+    briefing:
+      "Comet NEOWISE delighted skywatchers in July 2020 with a broad, curved dust tail. It came from the Oort Cloud, swung around the Sun, and headed back into deep space. It will not return for about 6,800 years.",
+    sceneDescription:
+      "A real image of Comet NEOWISE floats in the dark, its golden dust tail curving away from the Sun. The camera drifts gently, adding parallax.",
+    suggestedQuestions: ["Where did Comet NEOWISE come from?", "Can I still see NEOWISE?", "What is a comet's tail made of?"],
+    scene: { type: "deep-space", bodyId: "comet-neowise", imageUrls: [IMAGERY.halley], accent: "#f0c987", variant: "small-body", cameraDistance: 5.1 },
+    nasaQuery: "Comet NEOWISE",
+    svsQuery: "NEOWISE comet",
+    links: [scienceLink("comet neowise"), nasaImagesLink("Comet NEOWISE")],
+  },
+];
